@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html id="intro" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeopardy JS</title>
+    <link rel="stylesheet" href="jeopardy.css" />
+
+    <link crossorigin rel="preload" as="font" href="fonts/gyparody-heavy.woff" />
+    <link crossorigin rel="preload" as="font" href="fonts/gyparody-heavy.woff2" />
+
+    <link crossorigin rel="preload" as="font" href="fonts/itc-korinna-bold.woff" />
+    <link crossorigin rel="preload" as="font" href="fonts/itc-korinna-bold.woff2" />
+
+    <link crossorigin rel="preload" as="font" href="fonts/swiss-911-compressed-regular.woff" />
+    <link crossorigin rel="preload" as="font" href="fonts/swiss-911-compressed-regular.woff2" />
+    <script>
+
+      document.addEventListener('contextmenu', event => event.preventDefault());
+
+      function markAsAnswered(elemen) {
+        console.log('Mark this', this);
+        console.log('Mark elm', elemen);
+        const srcElement = elemen.srcElement;
+        if (srcElement?.tagName.toLowerCase() === 'dd') {
+          srcElement.classList.add('answered');
+        }
+      }
+
+      function showAnswer(event) {
+        const srcElement = event.srcElement;
+        console.log('element', srcElement);
+        const previousContent = srcElement.innerHTML;
+        if (srcElement.tagName.toLowerCase() === 'dd' && event.which !== 1) {
+          event.preventDefault();
+          srcElement.innerHTML = srcElement.getAttribute('data-answer') ?? srcElement.innerHTML;
+        }
+      }
+
+    </script>
+  </head>
+  <body onclick="markAsAnswered(event)" onmousedown="showAnswer(event)">
+  <dl>
+    <dt>evil eval</dt>
+
+    <dd data-answer="number">typeof NaN</dd>
+    <dd data-answer="undefined">typeof undefined</dd>
+    <dd data-answer="object">typeof null</dd>
+    <dd data-answer="false">parseFloat(null,2) == parseFloat(null,2)</dd>
+    <dd data-answer="'fooNaN'">'foo' + + 'd'</dd>
+
+  </dl>
+
+  <dl>
+    <dt>DOMera obscura</dt>
+
+    <dd data-answer="Node.previousSibling()">What is the DOM function for accessing the previous DOM node?</dd>
+    <dd data-answer="Node.isEqualNode()">What is the DOM function for finding out, whether two DOM nodes are the same?</dd>
+    <dd data-answer="Node.compareDocumentPosition()">What is the DOM function for finding out, whether a DOM node is before or after another one?</dd>
+    <dd data-answer="false">What is the result of Array.isArray(document.querySelectorAll)?</dd>
+    <dd>sex</dd>
+  </dl>
+
+  <dl>
+    <dt>Only JS n3rds</dt>
+    <dd data-answer="window">Name an object that cannot be proxied!</dd>
+    <dd data-answer="6">How many primitives are in JS?</dd>
+    <dd data-answer="A well-known Symbol, stupid!">What is Symbol.iterator()?</dd>
+    <dd data-answer="0.1 + 0.2">0.30000000000000004</dd>
+    <dd data-answer="13">How many well-known symbols are in ES6?</dd>
+  </dl>
+
+  <dl>
+    <dt>CSS fest</dt>
+    <dd data-answer="ugh">all-petite-caps</dd>
+    <dd data-answer="CSS scroll-snapping">proximity</dd>
+    <dd data-answer="styling dialog::backdrop">::backdrop</dd>
+    <dd data-answer="CSS counters">counter-reset</dd>
+    <dd data-answer="Minimum line of lines in a block container that must be shown at the bottom of a page, region, or column.">orphans</dd>
+  </dl>
+
+  <dl>
+    <dt>Name that function</dt>
+
+    <dd data-answer="fat arrow function expresion FAFE">
+      <pre>()=>''</pre>
+    </dd>
+    <dd data-answer="immediately invoked fat arrow function expression IIFAFE">
+      <pre>(()=>''))()</pre>
+    </dd>
+    <dd data-answer="immediately invoked async fat arrow function expression IIAFAFE">
+      (async () => '')()
+    </dd>
+    <dd data-answer="anonymous generator function expresion AGFE">
+      function* () {}
+    </dd>
+    <dd data-answer="immediately invoked anonymous generator function expression AGFE">
+      (function* () {})()
+    </dd>
+  </dl>
+
+  <dl>
+    <dt>JS N3rdsToo!</dt>
+
+    <dd data-answer="false">
+      <pre>NaN === NaN</pre>
+    </dd>
+    <dd data-answer="object">
+      <pre>typeof new Date('2022-02-30')</pre>
+    </dd>
+    <dd data-answer="isInvalidDate = inV => inV + '' === 'Invalid Date'">
+      How to figure out an invalid new Date()?
+    </dd>
+    <dd data-answer="">
+      (function* () {})()
+    </dd>
+    <dd data-answer="Array.prototype[Symbol.iterator]=function * () { yield 2; yield 3; }">
+      [...(new Array(2,2))].reduce((a, b) => a + b) === 5
+    </dd>
+  </dl>
+
+    <script defer src="jeopardy.js"></script>
+  </body>
+</html>

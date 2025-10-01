@@ -1,0 +1,244 @@
+@font-face {
+  font-family: 'Swiss 911 Compressed';
+  src: url('fonts/swiss-911-compressed-regular.woff2') format('woff2'),
+    url('fonts/swiss-911-compressed-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gyroparody';
+  src: url('fonts/gyparody-heavy.woff2') format('woff2'),
+    url('fonts/gyparody-heavy.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ITC Korinna';
+  src: url('fonts/itc-korinna-bold.woff2') format('woff2'),
+    url('fonts/itc-korinna-bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@keyframes snow {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(70%);
+  }
+}
+
+:root {
+  --jeo-base-space: 1.25rem;
+
+  --jeo-color-background: #000;
+  --jeo-color-price: #d6a152;
+  --jeo-color-tile: #030a76;
+  --jeo-color-typo: #fff;
+
+  --jeo-font-swiss-911: 400 3vw / 1 'Swiss 911 Compressed', sans-serif;
+  --jeo-font-gyroparody: 900 12vw / 1 'Gyroparody', sans-serif;
+  --jeo-font-itc-korinna: 700 5vw / 1 'ITC Korinna', sans-serif;
+}
+
+html {
+  font-size: 10px;
+
+  background: var(--jeo-color-background);
+  color: var(--jeo-color-typo);
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--jeo-base-space);
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: var(--jeo-base-space);
+  min-height: 100vh;
+}
+
+#intro {
+  background: var(--jeo-color-tile);
+}
+
+#intro::before,
+#intro::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+
+  animation: snow linear infinite;
+  background-image: url(snow.png);
+  pointer-events: none;
+}
+
+#intro::before {
+  top: -3000%;
+  background-size: 40%;
+  animation-duration: 700s;
+  z-index: 1;
+
+  filter: blur(2px);
+}
+
+#intro::after {
+  top: -1500%;
+  background-size: 70%;
+  animation-duration: 200s;
+  z-index: 3;
+}
+
+#intro body {
+  cursor: pointer;
+}
+
+#intro body::before,
+#intro body::after {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  content: 'Jeopardy.JS!';
+  font: var(--jeo-font-gyroparody);
+}
+
+#intro body::before {
+  text-shadow: 0 0 0.1em #8ba2d0, 0 0 0.2em black;
+}
+
+#intro body::after {
+  background: no-repeat center center / 100% 1em;
+  background-image: linear-gradient(
+    #5ca3dd 25%,
+    #99aeb8 35%,
+    rgb(207, 179, 179) 50%,
+    #c1b8c9 55%,
+    #976a81 75%
+  );
+  -webkit-text-stroke: 0.01em #94a0b9;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#intro dl {
+  display: none;
+}
+
+dl {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  gap: var(--jeo-base-space);
+  max-width: 20vw;
+}
+
+dt,
+dd:target,
+dd::before {
+  background: var(--jeo-color-tile);
+}
+
+dt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-bottom: var(--jeo-base-space);
+  padding: calc(var(--jeo-base-space) * 2) var(--jeo-base-space)
+    calc(var(--jeo-base-space) * 1.5);
+  padding-bottom: calc(var(--jeo-base-space) * 1.5);
+  min-height: 6vw;
+
+  font: var(--jeo-font-swiss-911);
+  color: var(--jeo-color-typo);
+
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-shadow: 0.07em 0.07em 0.01em rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+}
+
+dd {
+  margin: 0;
+  visibility: hidden;
+  cursor: pointer;
+
+  font-size: 0;
+  line-height: 0;
+}
+
+dd::before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: calc(var(--jeo-base-space) * 2) var(--jeo-base-space);
+  visibility: visible;
+
+  color: var(--jeo-color-price);
+  font: var(--jeo-font-swiss-911);
+  text-shadow: 0.08em 0.05em 0.01em rgba(0, 0, 0, 0.8);
+}
+
+dd::first-letter {
+  font-size: 0.85em;
+  margin-top: 0.06em;
+}
+
+dd:nth-of-type(1)::before {
+  content: '$200';
+}
+
+dd:nth-of-type(2)::before {
+  content: '$400';
+}
+
+dd:nth-of-type(3)::before {
+  content: '$600';
+}
+
+dd:nth-of-type(4)::before {
+  content: '$800';
+}
+
+dd:nth-of-type(5)::before {
+  content: '$1000';
+}
+
+/* opened */
+dd:target {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  border: var(--jeo-base-space) solid var(--jeo-color-background);
+  padding: 5vw 10vw;
+  visibility: visible;
+
+  font: var(--jeo-font-itc-korinna);
+  font-size: 5vw;
+  text-align: center;
+  text-shadow: 0.08em 0.08em 0.01em rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+}
+
+dd:target::before {
+  display: none;
+}
+
+dd.answered::before {
+  content: '\00a0 ';
+}
