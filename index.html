@@ -4,35 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeopardy</title>
-    <link rel="stylesheet" href="jeopardy.css" />
+    <link rel="stylesheet" href="jeopardy.css"/>
 
-    <link crossorigin rel="preload" as="font" href="fonts/gyparody-heavy.woff" />
-    <link crossorigin rel="preload" as="font" href="fonts/gyparody-heavy.woff2" />
+    <link crossorigin rel="preload" as="font" href="fonts/gyparody-heavy.woff"/>
+    <link crossorigin rel="preload" as="font" href="fonts/gyparody-heavy.woff2"/>
 
-    <link crossorigin rel="preload" as="font" href="fonts/itc-korinna-bold.woff" />
-    <link crossorigin rel="preload" as="font" href="fonts/itc-korinna-bold.woff2" />
+    <link crossorigin rel="preload" as="font" href="fonts/itc-korinna-bold.woff"/>
+    <link crossorigin rel="preload" as="font" href="fonts/itc-korinna-bold.woff2"/>
 
-    <link crossorigin rel="preload" as="font" href="fonts/swiss-911-compressed-regular.woff" />
-    <link crossorigin rel="preload" as="font" href="fonts/swiss-911-compressed-regular.woff2" />
+    <link crossorigin rel="preload" as="font" href="fonts/swiss-911-compressed-regular.woff"/>
+    <link crossorigin rel="preload" as="font" href="fonts/swiss-911-compressed-regular.woff2"/>
 
 </head>
 <body>
-    <!-- <a href="#">test</a>
-    <a href="##">test2</a>
-    <a href="###"><button popovertarget="###">test3</button></a>
-    <div class="popover" id="###" popover="manual"><p>Frage zu Test3</p>
-        <button popovertarget="###" popovertargetaction="hide">Close</button>
-    </div>
-    <a href="####"><button popovertarget="####">test4</button></a>
-    <div id="####" popover="auto">Popover4</div> -->
-    <dl>
-        <dt>evil eval</dt>
+<!--<noscript>-->
+<dl>
+    <dt>evil eval</dt>
 
-        <dd data-answer="number"><a href="#evileval200"><button class="popoverbutton" popovertarget="evileval200">$200</button></a></dd>
-        <dd data-answer="undefined"><a href="#evileval400"><button class="popoverbutton" popovertarget="evileval400">$400</button></a></dd>
-        <dd data-answer="object"><a href="#evileval600"><button class="popoverbutton" popovertarget="evileval600">$600</button></a></dd>
-        <dd data-answer="false"><a href="#evileval800"><button class="popoverbutton" popovertarget="evileval800">$800</button></a></dd>
-        <dd data-answer="'fooNaN'"><a href="#evileval1000"><button class="popoverbutton" popovertarget="evileval1000">$1000</button></a></dd>
+    <dd data-answer="number"><a href="#evileval200">
+        <button class="popoverbutton" popovertarget="evileval200">$200</button>
+    </a></dd>
+    <dd data-answer="undefined"><a href="#evileval400">
+        <button class="popoverbutton" popovertarget="evileval400">$400</button>
+    </a></dd>
+    <dd data-answer="object"><a href="#evileval600">
+        <button class="popoverbutton" popovertarget="evileval600">$600</button>
+    </a></dd>
+    <dd data-answer="false"><a href="#evileval800">
+        <button class="popoverbutton" popovertarget="evileval800">$800</button>
+    </a></dd>
+    <dd data-answer="'fooNaN'"><a href="#evileval1000">
+        <button class="popoverbutton" popovertarget="evileval1000">$1000</button>
+    </a></dd>
 
     <!-- <dd data-answer="number">typeof NaN</dd>
     <dd data-answer="undefined">typeof undefined</dd>
@@ -40,428 +43,560 @@
     <dd data-answer="false">parseFloat(null,2) == parseFloat(null,2)</dd>
     <dd data-answer="'fooNaN'">'foo' + + 'd'</dd> -->
 
-    </dl>
+</dl>
+<dl>
+    <dt>ES2015 FTW!</dt>
 
-    <dl>
-        <dt>DOMera obscura</dt>
+    <dd><a href="#esftw200">
+        <button class="popoverbutton" popovertarget="esftw200">$200</button>
+    </a></dd>
+    <dd><a href="#esftw400">
+        <button class="popoverbutton" popovertarget="esftw400">$400</button>
+    </a></dd>
+    <dd><a href="#esftw600">
+        <button class="popoverbutton" popovertarget="esftw600">$600</button>
+    </a></dd>
+    <dd><a href="#esftwal800">
+        <button class="popoverbutton" popovertarget="esftw800">$800</button>
+    </a></dd>
+    <dd><a href="#esftw1000">
+        <button class="popoverbutton" popovertarget="esftw1000">$1000</button>
+    </a></dd>
 
-        <dd data-answer="Node.previousSibling()"><a href="#DOMera200"><button class="popoverbutton" popovertarget="DOMera200">$200</button></a></dd>
-        <dd data-answer="Node.isEqualNode()"><a href="#DOMera400"><button class="popoverbutton" popovertarget="DOMera400">$400</button></a></dd>
-        <dd data-answer="Node.compareDocumentPosition()"><a href="#DOMera600"><button class="popoverbutton" popovertarget="DOMera600">$600</button></a></dd>
-        <dd data-answer="false"><a href="#DOMera800"><button class="popoverbutton" popovertarget="DOMera800">$800</button></a></dd>
-        <dd data-answer="sex"><a href="#DOMera1000"><button class="popoverbutton" popovertarget="DOMera1000">$1000</button></a></dd>
+    <!-- <dd data-answer="number">typeof NaN</dd>
+    <dd data-answer="undefined">typeof undefined</dd>
+    <dd data-answer="object">typeof null</dd>
+    <dd data-answer="false">parseFloat(null,2) == parseFloat(null,2)</dd>
+    <dd data-answer="'fooNaN'">'foo' + + 'd'</dd> -->
 
-        <!-- <dd data-answer="Node.previousSibling()">What is the DOM function for accessing the previous DOM node?</dd>
-        <dd data-answer="Node.isEqualNode()">What is the DOM function for finding out, whether two DOM nodes are the same?</dd>
-        <dd data-answer="Node.compareDocumentPosition()">What is the DOM function for finding out, whether a DOM node is before or after another one?</dd>
-        <dd data-answer="false">What is the result of Array.isArray(document.querySelectorAll)?</dd>
-        <dd>sex</dd> -->
-    </dl>
+</dl>
 
-    <dl>
-        <dt>Only JS n3rds</dt>
+<dl>
+    <dt>DOMera obscura</dt>
 
-        <dd data-answer="window"><a href="#JSn3rds200"><button class="popoverbutton" popovertarget="JSn3rds200">$200</button></a></dd>
-        <dd data-answer="6"><a href="#JSn3rds400"><button class="popoverbutton" popovertarget="JSn3rds400">$400</button></a></dd>
-        <dd data-answer="A well-known Symbol, stupid!"><a href="#JSn3rds600"><button class="popoverbutton" popovertarget="JSn3rds600">$600</button></a></dd>
-        <dd data-answer="0.1 + 0.2"><a href="#JSn3rds800"><button class="popoverbutton" popovertarget="JSn3rds800">$800</button></a></dd>
-        <dd data-answer="13"><a href="#JSn3rds1000"><button class="popoverbutton" popovertarget="JSn3rds1000">$1000</button></a></dd>
+    <dd data-answer="Node.previousSibling()"><a href="#DOMera200">
+        <button class="popoverbutton" popovertarget="DOMera200">$200</button>
+    </a></dd>
+    <dd data-answer="Node.isEqualNode()"><a href="#DOMera400">
+        <button class="popoverbutton" popovertarget="DOMera400">$400</button>
+    </a></dd>
+    <dd data-answer="Node.compareDocumentPosition()"><a href="#DOMera600">
+        <button class="popoverbutton" popovertarget="DOMera600">$600</button>
+    </a></dd>
+    <dd data-answer="false"><a href="#DOMera800">
+        <button class="popoverbutton" popovertarget="DOMera800">$800</button>
+    </a></dd>
+    <dd data-answer="sex"><a href="#DOMera1000">
+        <button class="popoverbutton" popovertarget="DOMera1000">$1000</button>
+    </a></dd>
 
-        <!-- <dd data-answer="window">Name an object that cannot be proxied!</dd>
-        <dd data-answer="6">How many primitives are in JS?</dd>
-        <dd data-answer="A well-known Symbol, stupid!">What is Symbol.iterator()?</dd>
-        <dd data-answer="0.1 + 0.2">0.30000000000000004</dd>
-        <dd data-answer="13">How many well-known symbols are in ES6?</dd> -->
-    </dl>
+    <!-- <dd data-answer="Node.previousSibling()">What is the DOM function for accessing the previous DOM node?</dd>
+    <dd data-answer="Node.isEqualNode()">What is the DOM function for finding out, whether two DOM nodes are the same?</dd>
+    <dd data-answer="Node.compareDocumentPosition()">What is the DOM function for finding out, whether a DOM node is before or after another one?</dd>
+    <dd data-answer="false">What is the result of Array.isArray(document.querySelectorAll)?</dd>
+    <dd>sex</dd> -->
+</dl>
 
-    <dl>
-        <dt>CSS fest</dt>
+<dl>
+    <dt>Only JS n3rds</dt>
 
-        <dd data-answer="ugh"><a href="#CSSfest200"><button class="popoverbutton" popovertarget="CSSfest200">$200</button></a></dd>
-        <dd data-answer="CSS scroll-snapping"><a href="#CSSfest400"><button class="popoverbutton" popovertarget="CSSfest400">$400</button></a></dd>
-        <dd data-answer="styling dialog::backdrop"><a href="#CSSfest600"><button class="popoverbutton" popovertarget="CSSfest600">$600</button></a></dd>
-        <dd data-answer="CSS counters"><a href="#CSSfest800"><button class="popoverbutton" popovertarget="CSSfest800">$800</button></a></dd>
-        <dd data-answer="Minimum line of lines in a block container that must be shown at the bottom of a page, region, or column."><a href="#CSSfest1000"><button class="popoverbutton" popovertarget="CSSfest1000">$1000</button></a></dd>
+    <dd data-answer="window"><a href="#JSn3rds200">
+        <button class="popoverbutton" popovertarget="JSn3rds200">$200</button>
+    </a></dd>
+    <dd data-answer="6"><a href="#JSn3rds400">
+        <button class="popoverbutton" popovertarget="JSn3rds400">$400</button>
+    </a></dd>
+    <dd data-answer="A well-known Symbol, stupid!"><a href="#JSn3rds600">
+        <button class="popoverbutton" popovertarget="JSn3rds600">$600</button>
+    </a></dd>
+    <dd data-answer="0.1 + 0.2"><a href="#JSn3rds800">
+        <button class="popoverbutton" popovertarget="JSn3rds800">$800</button>
+    </a></dd>
+    <dd data-answer="13"><a href="#JSn3rds1000">
+        <button class="popoverbutton" popovertarget="JSn3rds1000">$1000</button>
+    </a></dd>
 
-        <!-- <dd data-answer="ugh">all-petite-caps</dd>
-        <dd data-answer="CSS scroll-snapping">proximity</dd>
-        <dd data-answer="styling dialog::backdrop">::backdrop</dd>
-        <dd data-answer="CSS counters">counter-reset</dd>
-        <dd data-answer="Minimum line of lines in a block container that must be shown at the bottom of a page, region, or column.">orphans</dd> -->
-    </dl>
+    <!-- <dd data-answer="window">Name an object that cannot be proxied!</dd>
+    <dd data-answer="6">How many primitives are in JS?</dd>
+    <dd data-answer="A well-known Symbol, stupid!">What is Symbol.iterator()?</dd>
+    <dd data-answer="0.1 + 0.2">0.30000000000000004</dd>
+    <dd data-answer="13">How many well-known symbols are in ES6?</dd> -->
+</dl>
 
-    <dl>
-        <dt>Name that function</dt>
+<dl>
+    <dt>CSS fest</dt>
 
-        <dd data-answer="fat arrow function expression FAFE"><a href="#Namefunction200"><button class="popoverbutton" popovertarget="Namefunction200">$200</button></a></dd>
-        <dd data-answer="immediately invoked fat arrow function expression IIFAFE"><a href="#Namefunction400"><button class="popoverbutton" popovertarget="Namefunction400">$400</button></a></dd>
-        <dd data-answer="immediately invoked async fat arrow function expression IIAFAFE"><a href="#Namefunction600"><button class="popoverbutton" popovertarget="Namefunction600">$600</button></a></dd>
-        <dd data-answer="anonymous generator function expresion AGFE"><a href="#Namefunction800"><button class="popoverbutton" popovertarget="Namefunction800">$800</button></a></dd>
-        <dd data-answer="immediately invoked anonymous generator function expression AGFE"><a href="#Namefunction1000"><button class="popoverbutton" popovertarget="Namefunction1000">$1000</button></a></dd>
+    <dd data-answer="ugh"><a href="#CSSfest200">
+        <button class="popoverbutton" popovertarget="CSSfest200">$200</button>
+    </a></dd>
+    <dd data-answer="CSS scroll-snapping"><a href="#CSSfest400">
+        <button class="popoverbutton" popovertarget="CSSfest400">$400</button>
+    </a></dd>
+    <dd data-answer="styling dialog::backdrop"><a href="#CSSfest600">
+        <button class="popoverbutton" popovertarget="CSSfest600">$600</button>
+    </a></dd>
+    <dd data-answer="CSS counters"><a href="#CSSfest800">
+        <button class="popoverbutton" popovertarget="CSSfest800">$800</button>
+    </a></dd>
+    <dd data-answer="Minimum line of lines in a block container that must be shown at the bottom of a page, region, or column.">
+        <a href="#CSSfest1000">
+            <button class="popoverbutton" popovertarget="CSSfest1000">$1000</button>
+        </a></dd>
 
-        <!-- <dd data-answer="fat arrow function expresion FAFE">
-        <pre>()=>''</pre>
-        </dd>
-        <dd data-answer="immediately invoked fat arrow function expression IIFAFE">
-        <pre>(()=>''))()</pre>
-        </dd>
-        <dd data-answer="immediately invoked async fat arrow function expression IIAFAFE">
-        (async () => '')()
-        </dd>
-        <dd data-answer="anonymous generator function expresion AGFE">
-        function* () {}
-        </dd>
-        <dd data-answer="immediately invoked anonymous generator function expression AGFE">
-        (function* () {})()
-        </dd> -->
-    </dl>
+    <!-- <dd data-answer="ugh">all-petite-caps</dd>
+    <dd data-answer="CSS scroll-snapping">proximity</dd>
+    <dd data-answer="styling dialog::backdrop">::backdrop</dd>
+    <dd data-answer="CSS counters">counter-reset</dd>
+    <dd data-answer="Minimum line of lines in a block container that must be shown at the bottom of a page, region, or column.">orphans</dd> -->
+</dl>
 
-    <dl>
-        <dt>JS N3rdsToo!</dt>
+<dl>
+    <dt>Name that function</dt>
 
-        <dd data-answer="false"><a href="#JSn3rdstoo200"><button class="popoverbutton" popovertarget="JSn3rdstoo200">$200</button></a></dd>
-        <dd data-answer="object"><a href="#JSn3rdstoo400"><button class="popoverbutton" popovertarget="JSn3rdstoo400">$400</button></a></dd>
-        <dd data-answer="isInvalidDate = inV => inV + '' === 'Invalid Date'"><a href="#JSn3rdstoo600"><button class="popoverbutton" popovertarget="JSn3rdstoo600">$600</button></a></dd>
-        <dd data-answer=""><a href="#JSn3rdstoo800"><button class="popoverbutton" popovertarget="JSn3rdstoo800">$800</button></a></dd>
-        <dd data-answer="Array.prototype[Symbol.iterator]=function * () { yield 2; yield 3; }"><a href="#JSn3rdstoo1000"><button class="popoverbutton" popovertarget="JSn3rdstoo1000">$1000</button></a></dd>
+    <dd data-answer="fat arrow function expression FAFE"><a href="#Namefunction200">
+        <button class="popoverbutton" popovertarget="Namefunction200">$200</button>
+    </a></dd>
+    <dd data-answer="immediately invoked fat arrow function expression IIFAFE"><a href="#Namefunction400">
+        <button class="popoverbutton" popovertarget="Namefunction400">$400</button>
+    </a></dd>
+    <dd data-answer="immediately invoked async fat arrow function expression IIAFAFE"><a href="#Namefunction600">
+        <button class="popoverbutton" popovertarget="Namefunction600">$600</button>
+    </a></dd>
+    <dd data-answer="anonymous generator function expresion AGFE"><a href="#Namefunction800">
+        <button class="popoverbutton" popovertarget="Namefunction800">$800</button>
+    </a></dd>
+    <dd data-answer="immediately invoked anonymous generator function expression AGFE"><a href="#Namefunction1000">
+        <button class="popoverbutton" popovertarget="Namefunction1000">$1000</button>
+    </a></dd>
 
-        <!-- <dd data-answer="false">
-        <pre>NaN === NaN</pre>
-        </dd>
-        <dd data-answer="object">
-        <pre>typeof new Date('2022-02-30')</pre>
-        </dd>
-        <dd data-answer="isInvalidDate = inV => inV + '' === 'Invalid Date'">
-        How to figure out an invalid new Date()?
-        </dd>
-        <dd data-answer="">
-        (function* () {})()
-        </dd>
-        <dd data-answer="Array.prototype[Symbol.iterator]=function * () { yield 2; yield 3; }">
-        [...(new Array(2,2))].reduce((a, b) => a + b) === 5
-        </dd> -->
-    </dl>
+    <!-- <dd data-answer="fat arrow function expresion FAFE">
+    <pre>()=>''</pre>
+    </dd>
+    <dd data-answer="immediately invoked fat arrow function expression IIFAFE">
+    <pre>(()=>''))()</pre>
+    </dd>
+    <dd data-answer="immediately invoked async fat arrow function expression IIAFAFE">
+    (async () => '')()
+    </dd>
+    <dd data-answer="anonymous generator function expresion AGFE">
+    function* () {}
+    </dd>
+    <dd data-answer="immediately invoked anonymous generator function expression AGFE">
+    (function* () {})()
+    </dd> -->
+</dl>
+
+<dl>
+    <dt>JS N3rdsToo!</dt>
+
+    <dd data-answer="false"><a href="#JSn3rdstoo200">
+        <button class="popoverbutton" popovertarget="JSn3rdstoo200">$200</button>
+    </a></dd>
+    <dd data-answer="object"><a href="#JSn3rdstoo400">
+        <button class="popoverbutton" popovertarget="JSn3rdstoo400">$400</button>
+    </a></dd>
+    <dd data-answer="isInvalidDate = inV => inV + '' === 'Invalid Date'"><a href="#JSn3rdstoo600">
+        <button class="popoverbutton" popovertarget="JSn3rdstoo600">$600</button>
+    </a></dd>
+    <dd data-answer="Uncaught SyntaxError: Unexpected token '*'"><a href="#JSn3rdstoo800">
+        <button class="popoverbutton" popovertarget="JSn3rdstoo800">$800</button>
+    </a></dd>
+    <dd data-answer="Array.prototype[Symbol.iterator]=function * () { yield 2; yield 3; }"><a
+            href="#JSn3rdstoo1000">
+        <button class="popoverbutton" popovertarget="JSn3rdstoo1000">$1000</button>
+    </a></dd>
+
+    <!-- <dd data-answer="false">
+    <pre>NaN === NaN</pre>
+    </dd>
+    <dd data-answer="object">
+    <pre>typeof new Date('2022-02-30')</pre>
+    </dd>
+    <dd data-answer="isInvalidDate = inV => inV + '' === 'Invalid Date'">
+    How to figure out an invalid new Date()?
+    </dd>
+    <dd data-answer="">
+    (function* () {})()
+    </dd>
+    <dd data-answer="Array.prototype[Symbol.iterator]=function * () { yield 2; yield 3; }">
+    [...(new Array(2,2))].reduce((a, b) => a + b) === 5
+    </dd> -->
+</dl>
 
 
-
-    <div class="popover" id="evileval200" popover="manual"><p>typeof NaN</p>
-        <div class="button-container">
-            <button popovertarget="evileval200" popovertargetaction="hide">Close</button>
-            <button popovertarget="evileval200answer" popovertargetaction="show">Answer</button>
-        </div>
+<div class="popover" id="esftw200" popover="manual"><p>What does Proxy.revocable()?</p>
+    <div class="button-container">
+        <button popovertarget="esftw200answer" popovertargetaction="show">Answer</button>
+        <button popovertarget="esftw200" popovertargetaction="hide">Close</button>
     </div>
-    <div class="popover" id="evileval200answer" popover="manual"><p>number</p>
-        <button popovertarget="evileval200answer" popovertargetaction="hide" class="button-container">Close</button>
-    </div>
-        
-    <div class="popover" id="evileval400" popover="manual"><p>typeof undefined</p>
-        <div class="button-container">
-            <button popovertarget="evileval400" popovertargetaction="hide">Close</button>
-            <button popovertarget="evileval400answer" popovertargetaction="show">Answer</button>
-        </div>
-    </div>
-    <div class="popover" id="evileval400answer" popover="manual"><p>undefined</p>
-        <button popovertarget="evileval400answer" popovertargetaction="hide" class="button-container">Close</button>
-    </div>
+</div>
+<div class="popover" id="esftw200answer" popover="manual"><p>It allows revoking a Proxy, i.e "unproxy" sth.</p>
+    <button popovertarget="esftw200answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
 
-    <div class="popover" id="evileval600" popover="manual"><p>typeof null</p>
-        <div class="button-container">
-            <button popovertarget="evileval600" popovertargetaction="hide">Close</button>
-            <button popovertarget="evileval600answer" popovertargetaction="show">Answer</button>
-        </div>
+<div class="popover" id="esftw400" popover="manual"><p>What is a tagged template literal?</p>
+    <div class="button-container">
+        <button popovertarget="esftw400answer" popovertargetaction="show">Answer</button>
+        <button popovertarget="esftw400" popovertargetaction="hide">Close</button>
     </div>
-    <div class="popover" id="evileval600answer" popover="manual"><p>object</p>
-        <button popovertarget="evileval600answer" popovertargetaction="hide" class="button-container">Close</button>
-    </div>
+</div>
+<div class="popover" id="esftw400answer" popover="manual"><p>A convention for invoking a function with a set of
+    parameters.</p>
+    <button popovertarget="esftw400answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
 
-    <div class="popover" id="evileval800" popover="manual"><p>parseFloat(null,2) == parseFloat(null,2)</p>
-        <div class="button-container">
-            <button popovertarget="evileval800" popovertargetaction="hide">Close</button>
-            <button popovertarget="evileval800answer" popovertargetaction="show">Answer</button>
-        </div>
+<div class="popover" id="esftw600" popover="manual"><p>Is String.padLeft in ES2025?</p>
+    <div class="button-container">
+        <button popovertarget="esftw600answer" popovertargetaction="show">Answer</button>
+        <button popovertarget="esftw600" popovertargetaction="hide">Close</button>
     </div>
-    <div class="popover" id="evileval800answer" popover="manual"><p>false</p>
-        <button popovertarget="evileval800answer" popovertargetaction="hide" class="button-container">Close</button>
-    </div>
+</div>
+<div class="popover" id="esftw600answer" popover="manual"><p>No.</p>
+    <button popovertarget="esftw600answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
 
-    <div class="popover" id="evileval1000" popover="manual"><p>'foo' + + 'd'</p>
-        <div class="button-container">
-            <button popovertarget="evileval1000" popovertargetaction="hide">Close</button>
-            <button popovertarget="evileval1000answer" popovertargetaction="show">Answer</button>
-        </div>
+<div class="popover" id="esftw800" popover="manual"><p>What does `for await (const variable of something)` do?</p>
+    <div class="button-container">
+        <button popovertarget="esftw800answer" popovertargetaction="show">Answer</button>
+        <button popovertarget="esftw800" popovertargetaction="hide">Close</button>
     </div>
-    <div class="popover" id="evileval1000answer" popover="manual"><p>'fooNaN'</p>
-        <button popovertarget="evileval1000answer" popovertargetaction="hide" class="button-container">Close</button>
-    </div>
+</div>
+<div class="popover" id="esftw800answer" popover="manual"><p>It consumes iterables.</p>
+    <button popovertarget="esftw800answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
 
+<div class="popover" id="esftw1000" popover="manual"><p>What does yield*?</p>
+    <div class="button-container">
+        <button popovertarget="esftw1000answer" popovertargetaction="show">Answer</button>
+        <button popovertarget="esftw1000" popovertargetaction="hide">Close</button>
+    </div>
+</div>
+<div class="popover" id="esftw1000answer" popover="manual"><p>It delegates to another generator.</p>
+    <button popovertarget="esftw1000answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
 
+<div class="popover" id="evileval200" popover="manual"><p>typeof NaN</p>
+    <div class="button-container">
+        <button popovertarget="evileval200answer" popovertargetaction="show">Answer</button>
+        <button popovertarget="evileval200" popovertargetaction="hide">Close</button>
+    </div>
+</div>
+<div class="popover" id="evileval200answer" popover="manual"><p>number</p>
+    <button popovertarget="evileval200answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
 
-    <div class="popover" id="DOMera200" popover="manual"><p>What is the DOM function for accessing the previous DOM node?</p>
-        <div class="button-container">
-            <button popovertarget="DOMera200" popovertargetaction="hide">Close</button>
-            <button popovertarget="DOMera200answer" popovertargetaction="show">Answer</button>
-        </div>
+<div class="popover" id="evileval400" popover="manual"><p>typeof undefined</p>
+    <div class="button-container">
+        <button popovertarget="evileval400answer" popovertargetaction="show">Answer</button>
+        <button popovertarget="evileval400" popovertargetaction="hide">Close</button>
     </div>
-    <div class="popover" id="DOMera200answer" popover="manual"><p>Node.previousSibling()</p>
-        <button popovertarget="DOMera200answer" popovertargetaction="hide" class="button-container">Close</button>
-    </div>
+</div>
+<div class="popover" id="evileval400answer" popover="manual"><p>undefined</p>
+    <button popovertarget="evileval400answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
 
-    <div class="popover" id="DOMera400" popover="manual"><p>What is the DOM function for finding out, whether two DOM nodes are the same?</p>
-        <div class="button-container">
-            <button popovertarget="DOMera400" popovertargetaction="hide">Close</button>
-            <button popovertarget="DOMera400answer" popovertargetaction="show">Answer</button>
-        </div>
+<div class="popover" id="evileval600" popover="manual"><p>typeof null</p>
+    <div class="button-container">
+        <button popovertarget="evileval600answer" popovertargetaction="show">Answer</button>
+        <button popovertarget="evileval600" popovertargetaction="hide">Close</button>
     </div>
-    <div class="popover" id="DOMera400answer" popover="manual"><p>Node.isEqualNode()</p>
-        <button popovertarget="DOMera400answer" popovertargetaction="hide" class="button-container">Close</button>
-    </div>
+</div>
+<div class="popover" id="evileval600answer" popover="manual"><p>object</p>
+    <button popovertarget="evileval600answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
 
-    <div class="popover" id="DOMera600" popover="manual"><p>What is the DOM function for finding out, whether a DOM node is before or after another one?</p>
-        <div class="button-container">
-            <button popovertarget="DOMera600" popovertargetaction="hide">Close</button>
-            <button popovertarget="DOMera600answer" popovertargetaction="show">Answer</button>
-        </div>
+<div class="popover" id="evileval800" popover="manual"><p>parseFloat(null,2) == parseFloat(null,2)</p>
+    <div class="button-container">
+        <button popovertarget="evileval800answer" popovertargetaction="show">Answer</button>
+        <button popovertarget="evileval800" popovertargetaction="hide">Close</button>
     </div>
-    <div class="popover" id="DOMera600answer" popover="manual"><p>Node.compareDocumentPosition()</p>
-        <button popovertarget="DOMera600answer" popovertargetaction="hide" class="button-container">Close</button>
-    </div>
+</div>
+<div class="popover" id="evileval800answer" popover="manual"><p>false</p>
+    <button popovertarget="evileval800answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
 
-    <div class="popover" id="DOMera800" popover="manual"><p>What is the result of Array.isArray(document.querySelectorAll)?</p>
-        <div class="button-container">
-            <button popovertarget="DOMera800" popovertargetaction="hide">Close</button>
-            <button popovertarget="DOMera800answer" popovertargetaction="show">Answer</button>
-        </div>
+<div class="popover" id="evileval1000" popover="manual"><p>'foo' + + 'd'</p>
+    <div class="button-container">
+        <button popovertarget="evileval1000answer" popovertargetaction="show">Answer</button>
+        <button popovertarget="evileval1000" popovertargetaction="hide">Close</button>
     </div>
-    <div class="popover" id="DOMera800answer" popover="manual"><p>false</p>
-        <button popovertarget="DOMera800answer" popovertargetaction="hide" class="button-container">Close</button>
-    </div>
-
-    <div class="popover" id="DOMera1000" popover="manual"><p>sex</p>
-        <button popovertarget="DOMera1000" popovertargetaction="hide">Close</button>
-    </div>
-
-
-
-    <div class="popover" id="JSn3rds200" popover="manual"><p>Name an object that cannot be proxied!</p>
-        <div class="button-container">
-            <button popovertarget="JSn3rds200" popovertargetaction="hide">Close</button>
-            <button popovertarget="JSn3rds200answer" popovertargetaction="show">Answer</button>
-        </div>
-    </div>
-    <div class="popover" id="JSn3rds200answer" popover="manual"><p>window</p>
-        <button popovertarget="JSn3rds200answer" popovertargetaction="hide" class="button-container">Close</button>
-    </div>
-
-    <div class="popover" id="JSn3rds400" popover="manual"><p>How many primitives are in JS?</p>
-        <div class="button-container">
-            <button popovertarget="JSn3rds400" popovertargetaction="hide">Close</button>
-            <button popovertarget="JSn3rds400answer" popovertargetaction="show">Answer</button>
-        </div>
-    </div>
-    <div class="popover" id="JSn3rds400answer" popover="manual"><p>6</p>
-        <button popovertarget="JSn3rds400answer" popovertargetaction="hide" class="button-container">Close</button>
-    </div>
-
-    <div class="popover" id="JSn3rds600" popover="manual"><p>What is Symbol.iterator()?</p>
-        <div class="button-container">
-            <button popovertarget="JSn3rds600" popovertargetaction="hide">Close</button>
-            <button popovertarget="JSn3rds600answer" popovertargetaction="show">Answer</button>
-        </div>
-    </div>
-    <div class="popover" id="JSn3rds600answer" popover="manual"><p>A well-known Symbol, stupid!</p>
-        <button popovertarget="JSn3rds600answer" popovertargetaction="hide" class="button-container">Close</button>
-    </div>
-
-    <div class="popover" id="JSn3rds800" popover="manual"><p>0.30000000000000004</p>
-        <div class="button-container">
-            <button popovertarget="JSn3rds800" popovertargetaction="hide">Close</button>
-            <button popovertarget="JSn3rds800answer" popovertargetaction="show">Answer</button>
-        </div>
-    </div>
-    <div class="popover" id="JSn3rds800answer" popover="manual"><p>0.1 + 0.2</p>
-        <button popovertarget="JSn3rds800answer" popovertargetaction="hide" class="button-container">Close</button>
-    </div>
-
-    <div class="popover" id="JSn3rds1000" popover="manual"><p>How many well-known symbols are in ES6?</p>
-        <div class="button-container">
-            <button popovertarget="JSn3rds1000" popovertargetaction="hide">Close</button>
-            <button popovertarget="JSn3rds1000answer" popovertargetaction="show">Answer</button>
-        </div>
-    </div>
-    <div class="popover" id="JSn3rds1000answer" popover="manual"><p>13</p>
-        <button popovertarget="JSn3rds1000answer" popovertargetaction="hide" class="button-container">Close</button>
-    </div>
+</div>
+<div class="popover" id="evileval1000answer" popover="manual"><p>'fooNaN'</p>
+    <button popovertarget="evileval1000answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
 
 
-
-    <div class="popover" id="CSSfest200" popover="manual"><p>all-petite-caps</p>
-        <div class="button-container">
-            <button popovertarget="CSSfest200" popovertargetaction="hide">Close</button>
-            <button popovertarget="CSSfest200answer" popovertargetaction="show">Answer</button>
-        </div>
+<div class="popover" id="DOMera200" popover="manual"><p>What is the DOM function for accessing the previous DOM
+    node?</p>
+    <div class="button-container">
+        <button popovertarget="DOMera200answer" popovertargetaction="show">Answer</button>
+        <button popovertarget="DOMera200" popovertargetaction="hide">Close</button>
     </div>
-    <div class="popover" id="CSSfest200answer" popover="manual"><p>ugh</p>
-        <button popovertarget="CSSfest200answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
+<div class="popover" id="DOMera200answer" popover="manual"><p>Node.previousSibling()</p>
+    <button popovertarget="DOMera200answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
+
+<div class="popover" id="DOMera400" popover="manual"><p>What is the DOM function for finding out, whether two DOM
+    nodes are the same?</p>
+    <div class="button-container">
+        <button popovertarget="DOMera400answer" popovertargetaction="show">Answer</button>
+        <button popovertarget="DOMera400" popovertargetaction="hide">Close</button>
     </div>
+</div>
+<div class="popover" id="DOMera400answer" popover="manual"><p>Node.isEqualNode()</p>
+    <button popovertarget="DOMera400answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
 
-    <div class="popover" id="CSSfest400" popover="manual"><p>proximity</p>
-        <div class="button-container">
-            <button popovertarget="CSSfest400" popovertargetaction="hide">Close</button>
-            <button popovertarget="CSSfest400answer" popovertargetaction="show">Answer</button>
-        </div>
+<div class="popover" id="DOMera600" popover="manual"><p>What is the DOM function for finding out, whether a DOM node
+    is before or after another one?</p>
+    <div class="button-container">
+        <button popovertarget="DOMera600answer" popovertargetaction="show">Answer</button>
+        <button popovertarget="DOMera600" popovertargetaction="hide">Close</button>
     </div>
-    <div class="popover" id="CSSfest400answer" popover="manual"><p>CSS scroll-snapping</p>
-        <button popovertarget="CSSfest400answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
+<div class="popover" id="DOMera600answer" popover="manual"><p>Node.compareDocumentPosition()</p>
+    <button popovertarget="DOMera600answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
+
+<div class="popover" id="DOMera800" popover="manual"><p>What is the result of
+    Array.isArray(document.querySelectorAll)?</p>
+    <div class="button-container">
+        <button popovertarget="DOMera800answer" popovertargetaction="show">Answer</button>
+        <button popovertarget="DOMera800" popovertargetaction="hide">Close</button>
     </div>
+</div>
+<div class="popover" id="DOMera800answer" popover="manual"><p>false</p>
+    <button popovertarget="DOMera800answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
 
-    <div class="popover" id="CSSfest600" popover="manual"><p>::backdrop</p>
-        <div class="button-container">
-            <button popovertarget="CSSfest600" popovertargetaction="hide">Close</button>
-            <button popovertarget="CSSfest600answer" popovertargetaction="show">Answer</button>
-        </div>
+<div class="popover" id="DOMera1000" popover="manual"><p>What is sex?</p>
+    <button popovertarget="DOMera1000" popovertargetaction="hide">Close</button>
+</div>
+<div class="popover" id="DOMera1000answer" popover="manual"><p>A possible value for autocomplete</p>
+    <button popovertarget="DOMera1000answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
+
+
+<div class="popover" id="JSn3rds200" popover="manual"><p>Name an object that cannot be proxied!</p>
+    <div class="button-container">
+        <button popovertarget="JSn3rds200answer" popovertargetaction="show">Answer</button>
+        <button popovertarget="JSn3rds200" popovertargetaction="hide">Close</button>
     </div>
-    <div class="popover" id="CSSfest600answer" popover="manual"><p>styling dialog::backdrop</p>
-        <button popovertarget="CSSfest600answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
+<div class="popover" id="JSn3rds200answer" popover="manual"><p>window</p>
+    <button popovertarget="JSn3rds200answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
+
+<div class="popover" id="JSn3rds400" popover="manual"><p>How many primitives are in JS?</p>
+    <div class="button-container">
+        <button popovertarget="JSn3rds400answer" popovertargetaction="show">Answer</button>
+        <button popovertarget="JSn3rds400" popovertargetaction="hide">Close</button>
     </div>
+</div>
+<div class="popover" id="JSn3rds400answer" popover="manual"><p>6</p>
+    <button popovertarget="JSn3rds400answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
 
-    <div class="popover" id="CSSfest800" popover="manual"><p>counter-reset</p>
-        <div class="button-container">
-            <button popovertarget="CSSfest800" popovertargetaction="hide">Close</button>
-            <button popovertarget="CSSfest800answer" popovertargetaction="show">Answer</button>
-        </div>
+<div class="popover" id="JSn3rds600" popover="manual"><p>What is Symbol.iterator()?</p>
+    <div class="button-container">
+        <button popovertarget="JSn3rds600answer" popovertargetaction="show">Answer</button>
+        <button popovertarget="JSn3rds600" popovertargetaction="hide">Close</button>
     </div>
-    <div class="popover" id="CSSfest800answer" popover="manual"><p>CSS counters</p>
-        <button popovertarget="CSSfest800answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
+<div class="popover" id="JSn3rds600answer" popover="manual"><p>A well-known Symbol, stupid!</p>
+    <button popovertarget="JSn3rds600answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
+
+<div class="popover" id="JSn3rds800" popover="manual"><p>0.30000000000000004</p>
+    <div class="button-container">
+        <button popovertarget="JSn3rds800" popovertargetaction="hide">Close</button>
+        <button popovertarget="JSn3rds800answer" popovertargetaction="show">Answer</button>
     </div>
+</div>
+<div class="popover" id="JSn3rds800answer" popover="manual"><p>0.1 + 0.2</p>
+    <button popovertarget="JSn3rds800answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
 
-    <div class="popover" id="CSSfest1000" popover="manual"><p>orphans</p>
-        <div class="button-container">
-            <button popovertarget="CSSfest1000" popovertargetaction="hide">Close</button>
-            <button popovertarget="CSSfest1000answer" popovertargetaction="show">Answer</button>
-        </div>
+<div class="popover" id="JSn3rds1000" popover="manual"><p>How many well-known symbols are in ES6?</p>
+    <div class="button-container">
+        <button popovertarget="JSn3rds1000answer" popovertargetaction="show">Answer</button>
+        <button popovertarget="JSn3rds1000" popovertargetaction="hide">Close</button>
     </div>
-    <div class="popover" id="CSSfest1000answer" popover="manual"><p>Minimum line of lines in a block container that must be shown at the bottom of a page, region, or column.</p>
-        <button popovertarget="CSSfest1000answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
+<div class="popover" id="JSn3rds1000answer" popover="manual"><p>13</p>
+    <button popovertarget="JSn3rds1000answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
+
+
+<div class="popover" id="CSSfest200" popover="manual"><p>all-petite-caps</p>
+    <div class="button-container">
+        <button popovertarget="CSSfest200answer" popovertargetaction="show">Answer</button>
+        <button popovertarget="CSSfest200" popovertargetaction="hide">Close</button>
     </div>
+</div>
+<div class="popover" id="CSSfest200answer" popover="manual"><p>ugh</p>
+    <button popovertarget="CSSfest200answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
 
-
-
-    <div class="popover" id="Namefunction200" popover="manual"><p><pre>()=>''</pre></p>
-        <div class="button-container">
-            <button popovertarget="Namefunction200" popovertargetaction="hide">Close</button>
-            <button popovertarget="Namefunction200answer" popovertargetaction="show">Answer</button>
-        </div>
+<div class="popover" id="CSSfest400" popover="manual"><p>proximity</p>
+    <div class="button-container">
+        <button popovertarget="CSSfest400answer" popovertargetaction="show">Answer</button>
+        <button popovertarget="CSSfest400" popovertargetaction="hide">Close</button>
     </div>
-    <div class="popover" id="Namefunction200answer" popover="manual"><p>fat arrow function expression FAFE</p>
-        <button popovertarget="Namefunction200answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
+<div class="popover" id="CSSfest400answer" popover="manual"><p>CSS scroll-snapping</p>
+    <button popovertarget="CSSfest400answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
+
+<div class="popover" id="CSSfest600" popover="manual"><p>::backdrop</p>
+    <div class="button-container">
+        <button popovertarget="CSSfest600answer" popovertargetaction="show">Answer</button>
+        <button popovertarget="CSSfest600" popovertargetaction="hide">Close</button>
     </div>
+</div>
+<div class="popover" id="CSSfest600answer" popover="manual"><p>styling dialog::backdrop</p>
+    <button popovertarget="CSSfest600answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
 
-    <div class="popover" id="Namefunction400" popover="manual"><p><pre>(()=>''))()</pre></p>
-        <div class="button-container">
-            <button popovertarget="Namefunction400" popovertargetaction="hide">Close</button>
-            <button popovertarget="Namefunction400answer" popovertargetaction="show">Answer</button>
-        </div>
+<div class="popover" id="CSSfest800" popover="manual"><p>counter-reset</p>
+    <div class="button-container">
+        <button popovertarget="CSSfest800answer" popovertargetaction="show">Answer</button>
+        <button popovertarget="CSSfest800" popovertargetaction="hide">Close</button>
     </div>
-    <div class="popover" id="Namefunction400answer" popover="manual"><p>immediately invoked fat arrow function expression IIFAFE</p>
-        <button popovertarget="Namefunction400answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
+<div class="popover" id="CSSfest800answer" popover="manual"><p>CSS counters</p>
+    <button popovertarget="CSSfest800answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
+
+<div class="popover" id="CSSfest1000" popover="manual"><p>orphans</p>
+    <div class="button-container">
+        <button popovertarget="CSSfest1000answer" popovertargetaction="show">Answer</button>
+        <button popovertarget="CSSfest1000" popovertargetaction="hide">Close</button>
     </div>
+</div>
+<div class="popover" id="CSSfest1000answer" popover="manual"><p>Minimum line of lines in a block container that must
+    be shown at the bottom of a page, region, or column.</p>
+    <button popovertarget="CSSfest1000answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
 
-    <div class="popover" id="Namefunction600" popover="manual"><p>(async () => '')()</p>
-        <div class="button-container">
-            <button popovertarget="Namefunction600" popovertargetaction="hide">Close</button>
-            <button popovertarget="Namefunction600answer" popovertargetaction="show">Answer</button>
-        </div>
+
+<div class="popover" id="Namefunction200" popover="manual"><p>
+    <pre>()=>''</pre>
+    </p>
+    <div class="button-container">
+        <button popovertarget="Namefunction200answer" popovertargetaction="show">Answer</button>
+        <button popovertarget="Namefunction200" popovertargetaction="hide">Close</button>
     </div>
-    <div class="popover" id="Namefunction600answer" popover="manual"><p>immediately invoked async fat arrow function expression IIAFAFE</p>
-        <button popovertarget="Namefunction600answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
+<div class="popover" id="Namefunction200answer" popover="manual"><p>fat arrow function expression FAFE</p>
+    <button popovertarget="Namefunction200answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
+
+<div class="popover" id="Namefunction400" popover="manual"><p>
+    <pre>(()=>''))()</pre>
+    </p>
+    <div class="button-container">
+        <button popovertarget="Namefunction400answer" popovertargetaction="show">Answer</button>
+        <button popovertarget="Namefunction400" popovertargetaction="hide">Close</button>
     </div>
+</div>
+<div class="popover" id="Namefunction400answer" popover="manual"><p>immediately invoked fat arrow function
+    expression IIFAFE</p>
+    <button popovertarget="Namefunction400answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
 
-    <div class="popover" id="Namefunction800" popover="manual"><p>function* () {}</p>
-        <div class="button-container">
-            <button popovertarget="Namefunction800" popovertargetaction="hide">Close</button>
-            <button popovertarget="Namefunction800answer" popovertargetaction="show">Answer</button>
-        </div>
+<div class="popover" id="Namefunction600" popover="manual"><p>(async () => '')()</p>
+    <div class="button-container">
+        <button popovertarget="Namefunction600answer" popovertargetaction="show">Answer</button>
+        <button popovertarget="Namefunction600" popovertargetaction="hide">Close</button>
     </div>
-    <div class="popover" id="Namefunction800answer" popover="manual"><p>anonymous generator function expresion AGFE</p>
-        <button popovertarget="Namefunction800answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
+<div class="popover" id="Namefunction600answer" popover="manual"><p>immediately invoked async fat arrow function
+    expression IIAFAFE</p>
+    <button popovertarget="Namefunction600answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
+
+<div class="popover" id="Namefunction800" popover="manual"><p>function* () {}</p>
+    <div class="button-container">
+        <button popovertarget="Namefunction800answer" popovertargetaction="show">Answer</button>
+        <button popovertarget="Namefunction800" popovertargetaction="hide">Close</button>
     </div>
+</div>
+<div class="popover" id="Namefunction800answer" popover="manual"><p>anonymous generator function expresion AGFE</p>
+    <button popovertarget="Namefunction800answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
 
-    <div class="popover" id="Namefunction1000" popover="manual"><p>(function* () {})()</p>
-        <div class="button-container">
-            <button popovertarget="Namefunction1000" popovertargetaction="hide">Close</button>
-            <button popovertarget="Namefunction1000answer" popovertargetaction="show">Answer</button>
-        </div>
+<div class="popover" id="Namefunction1000" popover="manual"><p>(function* () {})()</p>
+    <div class="button-container">
+        <button popovertarget="Namefunction1000answer" popovertargetaction="show">Answer</button>
+        <button popovertarget="Namefunction1000" popovertargetaction="hide">Close</button>
     </div>
-    <div class="popover" id="Namefunction1000answer" popover="manual"><p>immediately invoked anonymous generator function expression AGFE</p>
-        <button popovertarget="Namefunction1000answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
+<div class="popover" id="Namefunction1000answer" popover="manual"><p>immediately invoked anonymous generator
+    function expression AGFE</p>
+    <button popovertarget="Namefunction1000answer" popovertargetaction="hide" class="button-container">Close
+    </button>
+</div>
+
+
+<div class="popover" id="JSn3rdstoo200" popover="manual"><p>
+    <pre>NaN === NaN</pre>
+    </p>
+    <div class="button-container">
+        <button popovertarget="JSn3rdstoo200answer" popovertargetaction="show">Answer</button>
+        <button popovertarget="JSn3rdstoo200" popovertargetaction="hide">Close</button>
     </div>
+</div>
+<div class="popover" id="JSn3rdstoo200answer" popover="manual"><p>false</p>
+    <button popovertarget="JSn3rdstoo200answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
 
-
-
-    <div class="popover" id="JSn3rdstoo200" popover="manual"><p><pre>NaN === NaN</pre></p>
-        <div class="button-container">
-            <button popovertarget="JSn3rdstoo200" popovertargetaction="hide">Close</button>
-            <button popovertarget="JSn3rdstoo200answer" popovertargetaction="show">Answer</button>
-        </div>
+<div class="popover" id="JSn3rdstoo400" popover="manual"><p>
+    <pre>typeof new Date('2022-02-30')</pre>
+    </p>
+    <div class="button-container">
+        <button popovertarget="JSn3rdstoo400answer" popovertargetaction="show">Answer</button>
+        <button popovertarget="JSn3rdstoo400" popovertargetaction="hide">Close</button>
     </div>
-    <div class="popover" id="JSn3rdstoo200answer" popover="manual"><p>false</p>
-        <button popovertarget="JSn3rdstoo200answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
+<div class="popover" id="JSn3rdstoo400answer" popover="manual"><p>object</p>
+    <button popovertarget="JSn3rdstoo400answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
+
+<div class="popover" id="JSn3rdstoo600" popover="manual"><p>How to figure out an invalid new Date()?</p>
+    <div class="button-container">
+        <button popovertarget="JSn3rdstoo600answer" popovertargetaction="show">Answer</button>
+        <button popovertarget="JSn3rdstoo600" popovertargetaction="hide">Close</button>
     </div>
+</div>
+<div class="popover" id="JSn3rdstoo600answer" popover="manual"><p>isInvalidDate = inV => inV + '' === 'Invalid
+    Date'</p>
+    <button popovertarget="JSn3rdstoo600answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
 
-    <div class="popover" id="JSn3rdstoo400" popover="manual"><p><pre>typeof new Date('2022-02-30')</pre></p>
-        <div class="button-container">
-            <button popovertarget="JSn3rdstoo400" popovertargetaction="hide">Close</button>
-            <button popovertarget="JSn3rdstoo400answer" popovertargetaction="show">Answer</button>
-        </div>
+<div class="popover" id="JSn3rdstoo800" popover="manual"><p>(*()=>({}))()</p>
+    <div class="button-container">
+        <button popovertarget="JSn3rdstoo800answer" popovertargetaction="show">Answer</button>
+        <button popovertarget="JSn3rdstoo800" popovertargetaction="hide">Close</button>
     </div>
-    <div class="popover" id="JSn3rdstoo400answer" popover="manual"><p>object</p>
-        <button popovertarget="JSn3rdstoo400answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
+<div class="popover" id="JSn3rdstoo800answer" popover="manual"><p></p>
+    <p>Uncaught SyntaxError: Unexpected token '*'</p>
+    <button popovertarget="JSn3rdstoo800answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
+
+<div class="popover" id="JSn3rdstoo1000" popover="manual"><p>[...(new Array(2,2))].reduce((a, b) => a + b) === 5</p>
+    <div class="button-container">
+        <button popovertarget="JSn3rdstoo1000answer" popovertargetaction="show">Answer</button>
+        <button popovertarget="JSn3rdstoo1000" popovertargetaction="hide">Close</button>
     </div>
+</div>
+<div class="popover" id="JSn3rdstoo1000answer" popover="manual"><p>Array.prototype[Symbol.iterator]=function * () {
+    yield 2; yield 3; }</p>
+    <button popovertarget="JSn3rdstoo1000answer" popovertargetaction="hide" class="button-container">Close</button>
+</div>
 
-    <div class="popover" id="JSn3rdstoo600" popover="manual"><p>How to figure out an invalid new Date()?</p>
-        <div class="button-container">
-            <button popovertarget="JSn3rdstoo600" popovertargetaction="hide">Close</button>
-            <button popovertarget="JSn3rdstoo600answer" popovertargetaction="show">Answer</button>
-        </div>
-    </div>
-    <div class="popover" id="JSn3rdstoo600answer" popover="manual"><p>isInvalidDate = inV => inV + '' === 'Invalid Date'</p>
-        <button popovertarget="JSn3rdstoo600answer" popovertargetaction="hide" class="button-container">Close</button>
-    </div>
-
-    <div class="popover" id="JSn3rdstoo800" popover="manual"><p>(function* () {})()</p>
-        <div class="button-container">
-            <button popovertarget="JSn3rdstoo800" popovertargetaction="hide">Close</button>
-            <button popovertarget="JSn3rdstoo800answer" popovertargetaction="show">Answer</button>
-        </div>
-    </div>
-    <div class="popover" id="JSn3rdstoo800answer" popover="manual"><p></p>
-        <button popovertarget="JSn3rdstoo800answer" popovertargetaction="hide" class="button-container">Close</button>
-    </div>
-
-    <div class="popover" id="JSn3rdstoo1000" popover="manual"><p>[...(new Array(2,2))].reduce((a, b) => a + b) === 5</p>
-        <div class="button-container">
-            <button popovertarget="JSn3rdstoo1000" popovertargetaction="hide">Close</button>
-            <button popovertarget="JSn3rdstoo1000answer" popovertargetaction="show">Answer</button>
-        </div>
-    </div>
-    <div class="popover" id="JSn3rdstoo1000answer" popover="manual"><p>Array.prototype[Symbol.iterator]=function * () { yield 2; yield 3; }</p>
-        <button popovertarget="JSn3rdstoo1000answer" popovertargetaction="hide" class="button-container">Close</button>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!--</noscript>-->
 </body>
 </html>
